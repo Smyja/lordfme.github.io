@@ -121,85 +121,83 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <footer>
-        <div class="footer_wrap">
-            <ul>
-                <li><a href="https://time.is">Check time accuracy</a></li>
-                <!-- Twitter-->
-                <li>
-                    <a href="https://maxwelleguakun.pythonanywhere.com/testnum">Check if num OK</a
+            <footer>
+                <div class="footer_wrap">
+                    <ul>
+                        <li><a href="https://time.is">Check time accuracy</a></li>
+                        <!-- Twitter-->
+                        <li>
+                            <a href="https://maxwelleguakun.pythonanywhere.com/testnum">Check if num OK</a
             >
           </li>
           <!-- Github-->
           <!-- <li><a href="">Privacy Policy</a></li> -->
-                <!-- <li><a href="">Terms of service</a></li> -->
-            </ul>
-        </div>
-    </footer>
-    <script>
-        function load(filename, id) {
-            var file = new XMLHttpRequest() || new ActiveXObject("MSXML2.XMLHTTP");
-            file.open("get", filename, true);
-            file.onreadystatechange = function() {
-                if (file.status === 200) {
-                    if (file.readyState === 4) {
-                        // Makes sure the document is ready to parse
-                        document.getElementById(id).innerHTML = file.responseText;
-                    }
+                        <!-- <li><a href="">Terms of service</a></li> -->
+                    </ul>
+                </div>
+            </footer>
+            <script>
+                function load(filename, id) {
+                    var file = new XMLHttpRequest() || new ActiveXObject("MSXML2.XMLHTTP");
+                    file.open("get", filename, true);
+                    file.onreadystatechange = function() {
+                        if (file.status === 200) {
+                            if (file.readyState === 4) {
+                                // Makes sure the document is ready to parse
+                                document.getElementById(id).innerHTML = file.responseText;
+                            }
+                        }
+                    };
+                    file.send(null);
                 }
-            };
-            file.send(null);
-        }
-        $(document).ready(function() {
-            window.onLoad = load(
-                "https://maxwelleguakun.pythonanywhere.com/projected",
-                "proj"
-            );
-            window.onLoad = load(
-                "https://maxwelleguakun.pythonanywhere.com/ffing",
-                "ffing"
-            );
-            window.onLoad = load(
-                "https://maxwelleguakun.pythonanywhere.com/balance",
-                "balance"
-            );
-            if ($(window).width() < 900) {
-                $(".footer_wrap").hide();
-            }
-        });
-        $(document).ready(function() {
-            if ($(window).width() < 900) {
-                $(".header_wrap").show();
-            } else {
-                $(".header_wrap").hide();
-            }
-        });
-        //   $(".menu-btn").click(function () {
-        //     $(".header_navs").slideToggle(500);
-        //   });
-        //   const menuBtn = document.querySelector(".menu-btn");
-        //   let menuOpen = false;
-        //   menuBtn.addEventListener("click", () => {
-        //     if (!menuOpen) {
-        //       menuBtn.classList.add("open");
-        //       menuOpen = true;
-        //     } else {
-        //       menuBtn.classList.remove("open");
-        //       menuOpen = false;
-        //     }
-        //   });
-    </script>
+                $(document).ready(function() {
+                    window.onLoad = load(
+                        "https://maxwelleguakun.pythonanywhere.com/projected",
+                        "proj"
+                    );
+                    window.onLoad = load(
+                        "https://maxwelleguakun.pythonanywhere.com/ffing",
+                        "ffing"
+                    );
+                    window.onLoad = load(
+                        "https://maxwelleguakun.pythonanywhere.com/balance",
+                        "balance"
+                    );
+                    if ($(window).width() < 900) {
+                        $(".footer_wrap").hide();
+                    }
+                });
+                $(document).ready(function() {
+                    if ($(window).width() < 900) {
+                        $(".header_wrap").show();
+                    } else {
+                        $(".header_wrap").hide();
+                    }
+                });
+                //   $(".menu-btn").click(function () {
+                //     $(".header_navs").slideToggle(500);
+                //   });
+                //   const menuBtn = document.querySelector(".menu-btn");
+                //   let menuOpen = false;
+                //   menuBtn.addEventListener("click", () => {
+                //     if (!menuOpen) {
+                //       menuBtn.classList.add("open");
+                //       menuOpen = true;
+                //     } else {
+                //       menuBtn.classList.remove("open");
+                //       menuOpen = false;
+                //     }
+                //   });
+            </script>
 
-    <style>
-        p {
-            text-align: center;
-            font-size: 40px;
-            margin-top: 10px;
-            color: #febc2b;
-        }
-    </style>
+            <style>
+                p {
+                    text-align: center;
+                    font-size: 40px;
+                    margin-top: 10px;
+                    color: #febc2b;
+                }
+            </style>
 </body>
 
 </html>
